@@ -18,9 +18,6 @@ bootstrap-toc:
 fontawesome:
   css: /assets/lib/fontawesome-free-5.15.4/css/all.min.css
 
-custom:
-  css: custom.css
-
 search:
   js: /assets/lib/simple-jekyll-search-1.10.0/simple-jekyll-search.min.js
 
