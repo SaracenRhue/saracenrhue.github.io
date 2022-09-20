@@ -1,6 +1,6 @@
 ---
 title: Useful CSS Libraries
-date: 2022-09-18 12:00:00 +0000
+date: 2022-09-18 +0000
 categories: [CSS,webdev,libraries,frameworks]
 tags: [CSS,webdev,libraries,frameworks]
 ---
