@@ -23,7 +23,7 @@ timezone: Europe/Vienna
 
 title: Saracen Rhue                         # the main title
 
-tagline: webdevelopment, automation and server management  # it will display as the sub-title
+tagline: coding dictionary   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A blog containing various articles about programming, linux and macOS.
