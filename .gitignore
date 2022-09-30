@@ -1,3 +1,8 @@
+# future posts
+2022-09-30-electron.md
+########################
+
+
 # hidden files
 .*
 !.git*
@@ -7,14 +12,12 @@
 !.husky
 !.commitlintrc.json
 !.versionrc.json
-
 # bundler cache
 _site
 vendor
-
 # rubygem
 *.gem
-
 # npm dependencies
 node_modules
 package-lock.json
+
