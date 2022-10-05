@@ -2,12 +2,20 @@
 title: Useful Python Modules
 date: 2022-10-02 +0000
 categories: [python, documentation]
-tags: [python, documentation, automation, backend, modules]
+tags: [python, documentation, automation, backend, modules, eel, pyautogui, telegram, bot, webserver, yaml, selenium]
 ---
 
 ## YAML
 
+### install
+
+```bash
+pip3 install pyyaml
+```
+
 read data from a .yml file
+
+### Usage
 
 ```python
 import yaml
@@ -28,7 +36,15 @@ prime_numbers: [2, 3, 5, 7, 11, 13, 17, 19]
 
 ## Selenium
 
+### install
+
+```bash
+pip3 install selenium
+```
+
 automate web browser
+
+### Usage
 
 ```python
 from selenium import webdriver
@@ -56,6 +72,14 @@ cmd("pkill firefox") #close all firefox instances
 
 ## Pyautogui
 
+### install
+
+```bash
+pip3 install pyautogui
+```
+
+### Usage
+
 ```python
 import pyautogui as bot
 
@@ -81,9 +105,64 @@ bot.keyDown("shift")
 bot.write("Hello world!", interval=0.25) #write text with 0.25 seconds delay between each key
 ```
 
+> Keep in mind that pyautogui may use a different keyboard layout than your system. For example, if you use a german keyboard layout, the key "z" is mapped to the key "y" in pyautogui.
+{: .prompt-info }
+
+[documentation](https://pyautogui.readthedocs.io/en/latest/keyboard.html#keyboard-keys)
+
+## Eel
+
+```bash
+pip3 install eel
+```
+
+Run a webserver with python in the backend and javascript in the frontend
+
+### Usage
+
+All website files are in the `site` folder. <br>
+This starts a webserver on `localhost:8000` and opens the `index.html` file in firefox
+
+```python
+import eel
+eel.init('site')
+
+@eel.expose #expose function to javascript
+def hello_world():
+    print("Hello World!")
+
+eel.start('index.html', mode='firefox', host='localhost', port=8000)
+```
+
+```javascript
+eel.hello_world() //call python function
+
+function hello_world() {
+    eel.hello_world() //wrap python function in javascript function
+}
+```
+
+#### passing arguments
+
+```python
+@eel.expose
+def get_ip():
+    return 'loclahost'
+```
+
+Here the python function returns a string which then is used in javascript
+
+```javascript
+function getIP() {
+  eel.get_ip()((ip) => {
+    document.querySelector('#ip').innerHTML = ip
+  })
+}
+```
+
 ## Telegram Bot
 
-### installl
+### install
 
 ```bash
 pip3 install python-telegram-bot
