@@ -1,6 +1,6 @@
 ---
 title: Chocolatey
-date: 2022-06-10 +0000
+date: 2022-10-06 +0000
 categories: [tutorial, install, packagemanager]
 tags: [tutorial, install, packagemanager, windows, shell]
 ---
