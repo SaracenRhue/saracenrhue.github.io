@@ -39,6 +39,7 @@ prime_numbers: [2, 3, 5, 7, 11, 13, 17, 19]
 ### install
 
 ```bash
+brew install geckodriver
 pip3 install selenium
 ```
 
@@ -68,6 +69,16 @@ href = element.get_attribute("href") #get attribute value
 url = driver.current_url #get current url
 driver.close() #close browser
 cmd("pkill firefox") #close all firefox instances
+```
+
+#### headless mode
+
+Run selenium without opening a browser window.
+
+```python
+op = webdriver.FirefoxOptions()
+op.add_argument('--headless')
+driver = webdriver.Firefox(options=op)
 ```
 
 ## Pyautogui
