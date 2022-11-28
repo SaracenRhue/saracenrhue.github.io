@@ -33,6 +33,52 @@ rest:
   port: 8443
 prime_numbers: [2, 3, 5, 7, 11, 13, 17, 19]
 ```
+## Pick
+
+### install
+
+```bash
+pip3 install pick
+```
+
+### Usage
+
+#### Select multiple items
+
+```python
+from pick import pick
+
+title = 'Please choose your favorite programming language (press SPACE to mark, ENTER to continue): '
+options = ['Java', 'JavaScript', 'Python', 'PHP', 'C++', 'Erlang', 'Haskell']
+selected = pick(options, title, multiselect=True, min_selection_count=1)
+print(selected)
+```
+
+`[('Java', 0), ('C++', 4)]`
+Returns an array with Tuples containing the selected String and the coressponding index<br>
+You can access items like a 2d array
+
+#### Select one item
+
+```python
+from pick import pick
+
+title = 'Please choose your favorite programming language: '
+options = ['Java', 'JavaScript', 'Python', 'PHP', 'C++', 'Erlang', 'Haskell']
+option, index = pick(options, title)
+print(option)
+print(index)
+```
+
+#### Options
+
+* `options`: a list of options to choose from
+* `title`: (optional) a title above options list
+* `indicator`: (optional) custom the selection indicator, defaults to `*`
+* `default_index`: (optional) set this if the default selected option is not the first one
+* `multiselect`: (optional), if set to True its possible to select multiple items by hitting SPACE
+* `min_selection_count`: (optional) for multi select feature to dictate a minimum of selected items before continuing
+* `screen`: (optional), if you are using `pick` within an existing curses application set this to your existing `screen` object. It is assumed this has initialised in the standard way (e.g. via `curses.wrapper()`, or `curses.noecho(); curses.cbreak(); screen.kepad(True)`)
 
 ## Selenium
 
