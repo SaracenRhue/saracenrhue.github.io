@@ -33,6 +33,53 @@ rest:
   port: 8443
 prime_numbers: [2, 3, 5, 7, 11, 13, 17, 19]
 ```
+
+## Icecream
+
+icecream is a Python library that makes it easier to debug your code by printing variables and expressions to stdout. It's a drop-in replacement for print() that adds a lot of useful features.
+
+### install
+
+```bash
+pip3 install icecream
+```
+
+### Usage
+
+```python
+import icecream as ice
+from icecream import ic
+
+test = "hello world"
+ic(test)
+```
+
+output:
+
+```bash
+ic| test: 'hello world'
+```
+
+### Documentation
+
+You don't need to import icecream in every file. Instead you can add this to your main.py:
+
+```python
+ice.install()
+```
+
+You can disable or enable icecream with:
+
+```python
+ic.disable()
+```
+
+```python
+ic.enable()
+```
+
+[icecream](https://github.com/gruns/icecream)
+
 ## Pick
 
 ### install
