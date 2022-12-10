@@ -2,7 +2,7 @@
 title: Useful Python Modules
 date: 2022-10-02 +0000
 categories: [python, documentation]
-tags: [python, documentation, automation, backend, modules, eel, pyautogui, telegram, bot, webserver, yaml, selenium]
+tags: [python, documentation, automation, backend, modules, eel, pyautogui, telegram, bot, webserver, yaml, selenium, pick, discord]
 ---
 
 ## YAML
