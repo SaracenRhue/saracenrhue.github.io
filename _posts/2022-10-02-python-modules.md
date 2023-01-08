@@ -1,8 +1,8 @@
 ---
-title: Useful Python Modules
-date: 2022-10-02 +0000
+title: Python Modules
+date: 2023-01-09 +0000
 categories: [python, documentation]
-tags: [python, documentation, automation, backend, modules, eel, pyautogui, telegram, bot, webserver, yaml, selenium, pick, discord]
+tags: [python, documentation, automation, backend, modules, eel, pyautogui, telegram, bot, webserver, yaml, selenium, pick, discord, beautifulsoup4, bs4]
 ---
 
 ## YAML
@@ -126,6 +126,69 @@ print(index)
 * `multiselect`: (optional), if set to True its possible to select multiple items by hitting SPACE
 * `min_selection_count`: (optional) for multi select feature to dictate a minimum of selected items before continuing
 * `screen`: (optional), if you are using `pick` within an existing curses application set this to your existing `screen` object. It is assumed this has initialised in the standard way (e.g. via `curses.wrapper()`, or `curses.noecho(); curses.cbreak(); screen.kepad(True)`)
+
+## Beautiful Soup 4
+
+### install
+
+```bash
+pip3 install requests
+pip3 install beautifulsoup4
+```
+
+### Usage
+
+#### Get HTML
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+URL = "https://example.org"
+
+r = requests.get(URL)
+soup = BeautifulSoup(r.content, 'html.parser')
+```
+
+#### Format HTML
+
+```python
+print(soup.prettify())
+```
+
+#### Search for elements
+
+Search for elements by tag and class name
+
+```python
+tag = soup.find('h2', class_='sc-1b6bgon-2 edmOvr font-primary')
+```
+
+Search for elements by tag and id
+
+```python
+tag = soup.find('h2', id='title')
+```
+
+Search for elements by tag and attribute
+
+```python
+tag = soup.find('h2', attrs={'data-id': 'title'})
+```
+
+#### Get text and attributes
+
+Get text inside a tag
+
+```python
+text = tag.text
+```
+
+Get attribute value
+
+```python
+href = tag.get('href')
+```
 
 ## Selenium
 
