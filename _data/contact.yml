@@ -11,6 +11,10 @@
   icon: 'fas fa-envelope'
   noblank: true            # open link in current tab
 -
+  type: stack-overflow
+  icon: 'fab fa-stack-overflow'
+  url:  'https://stackoverflow.com/users/15762068/saracen-rhue?tab=topactivity' 
+-
   type: rss
   icon: 'fas fa-rss'
   noblank: true
