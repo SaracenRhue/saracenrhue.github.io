@@ -9,9 +9,9 @@ A websocket is a computer communications protocol, providing full-duplex communi
 
 ## Python Websockets
 
-'''bash
+```bash
 pip3 install websockets
-'''
+```
 
 ### Server
 
