@@ -1,6 +1,6 @@
 ---
 title: CSS Pseudo Classes
-date: 2023-09-18 +0000
+date: 2023-01-26 +0000
 categories: [CSS,webdev]
 tags: [CSS,webdev]
 ---

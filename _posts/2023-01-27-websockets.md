@@ -1,5 +1,5 @@
 ---
-title:Websockets
+title: Websockets
 date: 2023-01-27 +0000
 categories: [python, documentation, websockets]
 tags: [python, documentation, automation, backend]
