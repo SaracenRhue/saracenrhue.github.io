@@ -55,4 +55,4 @@ async def hello():
 asyncio.get_event_loop().run_until_complete(hello())
 ```
 
-The server runs permanently, waiting for a client to connect. The client connects to the server, sends a message, and then waits for a response. The server receives the message, sends it back to the client, and then waits for another message. The client receives the message, prints it, and then exits.
+The server runs permanently, waiting for a client to connect. The client connects to the server, sends a message, and then waits for a response. The server receives the message, sends it back to the client, and then waits for another message. The client receives the message, prints it, and then exits. The server continues to wait for another client to connect.
