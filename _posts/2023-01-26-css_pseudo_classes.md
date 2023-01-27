@@ -15,7 +15,6 @@ tags: [CSS,webdev]
 .example a {
   color: red;
   }
-
 ```
 
 ### Now
@@ -34,7 +33,6 @@ tags: [CSS,webdev]
 .example img {
   color: red;
   }
-
 ```
 
 ### Now
