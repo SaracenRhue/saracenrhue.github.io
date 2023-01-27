@@ -327,9 +327,73 @@ function getIP() {
 }
 ```
 
-## Telegram Bot
+## pyfiglet
 
-### install
+pyfiglet is a python library to create ascii art from text
+
+```bash
+pip3 install pyfiglet
+```
+
+### Usage
+
+```python
+import pyfiglet
+
+def text_to_ascii(text: str):
+    ascii_art = pyfiglet.figlet_format(text)
+    print(ascii_art)
+
+text_to_ascii("Hello World!")
+```
+
+You can also pass options to the figlet_format() function to change the font and layout of the ASCII art.
+
+```python
+text_to_ascii("Hello World!", font="big")
+```
+
+This will change the font to "big"
+<br>
+You can see the list of available fonts by running
+
+```python
+print(pyfiglet.getFonts())
+```
+
+## Discord Bot
+
+```bash
+pip3 install discord.py
+```
+
+### Usage
+
+```python
+import discord
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print("Bot is ready.")
+
+@client.event
+async def on_message(message):
+    if message.content.startswith("!hello"):
+        await message.channel.send("Hello!")
+
+client.run("YOUR_TOKEN_HERE")
+```
+
+To check for admin permissions:
+
+```python
+if message.author == client.user and str(message.author) != ADMIN:
+    break
+```
+
+## Telegram Bot
 
 ```bash
 pip3 install python-telegram-bot
