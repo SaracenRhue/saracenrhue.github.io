@@ -97,7 +97,7 @@ socket.addEventListener('message', (event) => {
 });
 ```
 
-> If you want to connect over a domain using ssl: `wss://example.com:8765` <br>
-Without ssl: `ws://example.com:8765` <br>
+> If you want to connect over a domain using ssl: `wss://example.com:443` <br>
+Without ssl: `ws://example.com:80` <br>
 If you use a proxy manager like [nginx](https://nginx.org/en/) use the port `443` for ssl and `80` for non ssl. The direction to the websocket server will be handled from the proxy manager.
 {: .prompt-tip }
