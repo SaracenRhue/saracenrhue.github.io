@@ -69,3 +69,16 @@ Get elements by index
 ```perl
 @arr[0, 1, 2];
 ```
+
+Set elements by index
+
+```perl
+@arr[0, 1, 2] = (1, 2, 3);
+```
+
+Sort arrays
+
+```perl
+@arr = sort @arr; # Ascending
+@arr = reverse sort @arr; # Descending
+```

@@ -237,6 +237,107 @@ op.add_argument('--headless')
 driver = webdriver.Firefox(options=op)
 ```
 
+## Streamlit
+
+### install
+
+```bash
+pip3 install streamlit
+```
+
+### Usage
+
+```python
+import streamlit as st
+
+st.title("Hello World!")
+```
+
+```bash
+streamlit run main.py
+```
+
+### Components
+
+#### title
+
+The title of a streamlit page
+
+```python
+st.title("Hello World!")
+```
+
+#### Display text
+
+```python
+st.text('Fixed width text')
+st.markdown('_Markdown_') # see *
+st.latex(r''' e^{i\pi} + 1 = 0 ''')
+st.write('Most objects') # df, err, func, keras!
+st.write(['st', 'is <', 3]) # see *
+st.title('My title')
+st.header('My header')
+st.subheader('My sub')
+st.code('for i in range(8): foo()')
+* optional kwarg unsafe_allow_html = True
+```
+
+#### Display data
+
+```python
+st.dataframe(my_dataframe)
+st.table(data.iloc[0:10])
+st.json({'foo':'bar','fu':'ba'})
+st.metric('My metric', 42, 2)
+```
+
+#### Display media
+
+```python
+st.image('./header.png')
+st.audio(data)
+st.video(data)
+```
+
+#### Display interactive widgets
+
+```python
+st.button('Click me')
+st.data_editor('Edit data', data)
+st.checkbox('I agree')
+st.toggle('Enable')
+st.radio('Pick one', ['cats', 'dogs'])
+st.selectbox('Pick one', ['cats', 'dogs'])
+st.multiselect('Buy', ['milk', 'apples', 'potatoes'])
+st.slider('Pick a number', 0, 100)
+st.select_slider('Pick a size', ['S', 'M', 'L'])
+st.text_input('First name')
+st.number_input('Pick a number', 0, 10)
+st.text_area('Text to translate')
+st.date_input('Your birthday')
+st.time_input('Meeting time')
+st.file_uploader('Upload a CSV')
+st.download_button('Download file', data)
+st.camera_input("Take a picture")
+st.color_picker('Pick a color')
+```
+
+### Layout
+
+Streamlt uses a column based layout. You can add columns with `st.columns()` and then add elements to the columns.
+
+```python
+col1, col2 = st.columns(2) # split into 2 columns
+with col1:
+    st.write('This will appear in column 1')
+with col2:
+    st.write('This will appear in column 2')
+```
+
+#### Multiple Pages
+
+Stremlit can automatically create a sidebar for you. If you create every page in a seperate python file just put every page file except the main file in a folder called `pages`. Then a sidebar will be created automatically.
+
 ## Pyautogui
 
 ### install
