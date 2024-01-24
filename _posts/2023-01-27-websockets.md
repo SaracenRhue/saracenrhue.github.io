@@ -1,5 +1,5 @@
 ---
-title: WebSockets Cheatsheet
+title: WebSockets
 date: 2023-01-27 +0000
 categories: [Python, JavaScript, Documentation, WebSockets]
 tags: [Python, JavaScript, Documentation, Automation, Backend, Full-Duplex, TCP, WebSockets]
