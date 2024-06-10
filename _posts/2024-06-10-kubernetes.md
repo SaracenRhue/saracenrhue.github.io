@@ -1,6 +1,6 @@
 ---
 title: Kubernetes Cluster on Raspberry Pi
-date: 2022-09-18 +0000
+date: 2024-06-10 +0000
 categories: [linux, docker, containers]
 tags: [linux,documentation,arm64,amd64,cluster,pi]
 ---
