@@ -52,9 +52,20 @@ ssh into the other nodes and join the cluster using the token and hostname from 
 curl -sfL https://get.k3s.io | K3S_URL=https://hostname:6443 K3S_TOKEN=token_from_earlier sh -
 ```
 
-<!-- ## Install portainer
+## Install Portainer
 
 If you want to install portainer on your cluster, run the following commands on your master node:
 
-```bash -->
+```bash
+kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
+```
 
+Portainer is avalible at `http://master:30777`
+
+If you want to controll the cluster from a existing Portainer instance install Portainer Agent:
+
+```bash
+kubectl apply -f https://downloads.portainer.io/ce2-19/portainer-agent-k8s-lb.yaml
+```
+
+Now you can add the cluster to your existing Portainer instance.
