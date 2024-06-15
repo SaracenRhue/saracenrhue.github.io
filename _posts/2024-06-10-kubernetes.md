@@ -69,3 +69,5 @@ kubectl apply -f https://downloads.portainer.io/ce2-19/portainer-agent-k8s-lb.ya
 ```
 
 Now you can add the cluster to your existing Portainer instance.
+<br>
+[source](https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/)
