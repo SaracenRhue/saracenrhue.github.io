@@ -28,4 +28,7 @@ tailscale up
 - `--accept-routes` - Accept routes to other Tailscale nodes.
 - `--exit-node` - Use a specific node as the exit node for all traffic.
 
+> If you use routes or exit nodes you need to confirm this in the route settings of the device in the tailscale admin console.
+{: .prompt-tip }
+
 Full documentation can be found [here](https://tailscale.com/kb/1017/install).
