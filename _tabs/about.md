@@ -1,9 +1,14 @@
 ---
+<<<<<<< HEAD
 title: About
+=======
+# the default layout is 'page'
+>>>>>>> v7.2.4
 icon: fas fa-info-circle
 order: 4
 ---
 
+<<<<<<< HEAD
 Originally this was intended as a nice way to display my [coding documentation](https://github.com/SaracenRhue/codingDictionary) repository. But I'm also using it to display information about various things I frequently use as a programmer.<br>
 So every time I find a new tool or library I like, I add it here. This way I can easily find it again later.<br>
 (Since I add things as I learn them, some posts are a work in progress.
@@ -27,3 +32,7 @@ Some are also just a placeholder for a future post idea.)
 > lorem
 {: .nolineno } 
 -->
+=======
+> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+{: .prompt-tip }
+>>>>>>> v7.2.4
