@@ -7,7 +7,7 @@ tags: [linux,networking,tailscale,vpn,documentation,wireguard]
 
 ## Overview
 
-Tailscale is is a VPN based on Wireguard and allows you to connect your devices in a mesh network.
+Tailscale is is a VPN based on Wireguard and allows you to connect your devices in a wireguard mesh network.
 
 ## Installation
 
@@ -15,3 +15,17 @@ Tailscale is is a VPN based on Wireguard and allows you to connect your devices 
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
+## Usage 
+
+```bash
+tailscale up
+```
+
+### Flags 
+
+- `--ssh` - Enable the Tailscale SSH server to eliminate the need for managing SSH keys manually.
+- `--advertise-routes=192.0.2.0/24` - Advertise routes so you can access devices over Tailscale where it cant be installed directly.
+- `--accept-routes` - Accept routes to other Tailscale nodes.
+- `--exit-node` - Use a specific node as the exit node for all traffic.
+
+Full documentation can be found [here](https://tailscale.com/kb/1017/install).
