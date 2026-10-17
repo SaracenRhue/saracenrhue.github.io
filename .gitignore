@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-# future posts
-
-
-########################
-
-
-# hidden files
-.*
-!.git*
-!.editorconfig
-!.nojekyll
-!.travis.yml
-!.husky
-!.commitlintrc.json
-!.versionrc.json
-# bundler cache
-_site
-vendor
-# rubygem
-*.gem
-# npm dependencies
-node_modules
-package-lock.json
-
-=======
 # Bundler cache
 .bundle
 vendor
@@ -51,4 +25,8 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
->>>>>>> v7.2.4
+
+# Hidden system files
+*~
+.DS_Store
+Thumbs.db
